@@ -4,9 +4,7 @@
 
 ## Technologies
 > - Javascript
-> - React.js
-> - HTML5
-> - CSS3
+> - React
 > - Node
 
 ## Team
