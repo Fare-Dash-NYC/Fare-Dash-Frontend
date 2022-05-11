@@ -7,9 +7,7 @@
 > - React.js
 > - HTML5
 > - CSS3
-> - Express
 > - Node
-> - PostgresQL
 
 ## Team
 Annecie Jean Baptiste - Project Manager
