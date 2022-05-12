@@ -1,22 +1,29 @@
 import React from "react"
+import SignUp from "./Components/SignUp";
+import HomePage from "./Components/HomePage";
+import Explore from "./Components/Explore";
+import Login from "./Components/Login"
+import {Routes, Route, Router} from 'react-router-dom'
 import './App.css';
+import NavBar from "./Components/NavBar";
 
 function App() {
 	return (
 		<div>
-      <h1> FARE DASH </h1>
-			<nav class="navbar background">
-				<ul class="nav-list">
-					<li><a href="#explore">Explore</a></li>
-					<li><a href="#login">Login</a></li>
-					<li><a href="#signup">Sign Up</a></li>
-				</ul>
+			<NavBar/>
 
-				<div class="rightNav">
-					<input type="text" name="search" id="search" />
-					<button class="btn btn-sm">Search</button>
-				</div>
-			</nav>
+			<Routes>
+				<Route path="/" element={<HomePage/>}/>
+				<Route path="/signup" element={<SignUp/>}/>
+				<Route path="/explore" element={<Explore/>}/>
+				<Route path="login" element={<Login/>}/> 
+
+
+			</Routes>
+
+
+
+
 		</div>
 	)
 }
