@@ -1,0 +1,14 @@
+.mission-section{
+    /* display: flex; */
+/* width: 100px; */
+width: 500px;
+    color: white;
+} 
+
+.report-btn {
+
+    align-items: center;
+
+    background-color: white;
+margin: 50px;
+}
