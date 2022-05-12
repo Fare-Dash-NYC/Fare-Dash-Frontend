@@ -1,28 +1,29 @@
 import {Link} from "react-router-dom"
+import '../Navbar.css'
 function NavBar(){
     return (
 		<div>
-      <h1> FARE DASH </h1>
-			<nav class="navbar background">
+     
+			<nav className="navbar background"> 
+		
+			<h1> FARE DASH </h1>
 				<ul class="nav-list">
                     <Link to={'/'}>
-                <li><a href="">HomePage</a></li>
+						
+                <li>HomePage</li>
                     </Link>
                     <Link to={'/explore'}>
-					<li><a href="">Explore</a></li>
+					<li>Explore</li>
                     </Link>
                     <Link to={'/login'}>
-					<li><a href="">Login</a></li>
+					<li>Login</li>
                     </Link>
                     <Link to={'/signup'}>
-					<li><a href="">Sign Up</a></li>
+					<li>Sign Up</li>
                     </Link>
 				</ul>
 
-				<div class="rightNav">
-					<input type="text" name="search" id="search" />
-					<button class="btn btn-sm">Search</button>
-				</div>
+			
 			</nav>
 		</div>
 	)
