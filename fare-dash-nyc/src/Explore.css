@@ -1,0 +1,11 @@
+
+.container {
+
+    display: flex;
+    /* align-items: center; */
+   justify-content: center;
+}
+.station-form{
+    border-right: 2px solid rgb(0, 0, 0);
+    
+}

@@ -1,14 +1,36 @@
 .mission-section{
-    /* display: flex; */
+    display: flex;
 /* width: 100px; */
-width: 500px;
-    color: white;
-} 
-
-.report-btn {
-
+/* width: 500px; */
+    color: rgb(0, 0, 0);
     align-items: center;
+   justify-content: center;
+   margin-bottom: 200px;
+  
+} 
+.btn-container{
+    text-align: center;
+}
+.report-btn {
+/* align-items: center; */
+    
 
     background-color: white;
-margin: 50px;
+margin: 100px;
+}
+.mission{
+    width: 600px;
+}
+.carousel{
+    width: 600px;
+}
+
+.facts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.facts p {
+    width: 380px;
+    margin-left: 30px;
 }

@@ -2,6 +2,9 @@ import '../HomePage.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {UncontrolledCarousel} from 'reactstrap'
 import {Link} from "react-router-dom"
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { fa-user-police } from '@fortawesome/free-solid-svg-icons'
 
 
 function HomePage(){
@@ -10,17 +13,20 @@ function HomePage(){
     return(
         
         <div>
+          <div className='btn-container'>
             <Link to={'/explore'}>
             <button className='report-btn'>
                 VIEW LIVE REPORTS HERE
             </button>
             </Link>
+            </div>
 
            <div className="mission-section">
+<div className='mission'>
                <h1>MISSION STATEMENT</h1>
-           <p>If low-income public transit users had access to resources that helped with MTA fares and were made aware of cop presence in the subways, fewer people will suffer from police harassment and high fines.
-Mission Statement:
-Fare Dash is a platform that provides real-time updates of reported police sightings at stations, and direct donations to provide metro cards to eligible users. </p>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div className='carousel'>
 <UncontrolledCarousel
   items={[
     {
@@ -33,22 +39,30 @@ Fare Dash is a platform that provides real-time updates of reported police sight
     //   altText: 'Slide 2',
     //   caption: 'Slide 2',
       key: 2,
-      src: 'https://cms.prod.nypr.digital/images/300412/fill-1200x650/'
+      src: 'https://www.nydailynews.com/resizer/s4xSpKRIWT4rr2Aq_GFNNoIfq2E=/1200x0/left/top/cloudfront-us-east-1.images.arcpublishing.com/tronc/LUMHIN6W4NEQHLHXZI2WPBDH4U.JPG'
     },
     {
     //   altText: 'Slide 3',
     //   caption: 'Slide 3',
       key: 3,
-      src: 'https://static01.nyt.com/images/2019/12/22/opinion/22mta/merlin_163624677_5df8342e-7237-4d3e-aec5-6b822f44f4cf-superJumbo.jpg'
+      src: 'https://www.nydailynews.com/resizer/s4xSpKRIWT4rr2Aq_GFNNoIfq2E=/1200x0/left/top/cloudfront-us-east-1.images.arcpublishing.com/tronc/LUMHIN6W4NEQHLHXZI2WPBDH4U.JPG'
     }
   ]}
  />
+ </div>
            </div>
-           <div className='fcats'>
+           <div className='facts'>
+           <FontAwesomeIcon icon="fa-solid fa-user-police" />
+             <p>92% of the 481 fare evasion arrests in the fourth quarter of 2019 were of non-white riders; 60% were black. Data like that led New York Attorney General Letitia James to announce a probe of racial disparities in fare evasion stops. </p>
+             <p>fare evasion is in large part “a function of poverty and inconvenience.” People arrested for fare evasion rely on public defenders, a pretty good sign they are struggling to make ends meet.</p>
+              <p>Antiquated broken windows policing srategies that crimilize 
+                the poor at the turnstile do not begin to address any of the root 
+                problems playing out at the turnstile. They do not make transit more affordable.
+                They do not make it easier for riders to pay. They do  not reduce police bias,
+                but rather enable.
+
+              </p>
           
-           <script src="https://kit.fontawesome.com/66c973f71a.js" crossorigin="anonymous"></script>
- 
-           <FontAwesomeIcon icon="fa-solid fa-heart" />
            </div>
 
 
