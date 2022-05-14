@@ -8,7 +8,7 @@
 > - Node
 
 ## Team
-Annecie Jean Baptiste - Project Manager
+Annecie Jean Baptiste - Product Owner
 <br>Jan Morales - Scrum Master
 <br>Charles Yarney
 <br>Khalia Parris
