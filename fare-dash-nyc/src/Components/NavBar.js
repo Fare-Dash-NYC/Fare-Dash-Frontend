@@ -6,7 +6,7 @@ function NavBar(){
      
 			<nav className="navbar background"> 
 		
-			<h1> FARE DASH </h1>
+			<h1 className="fare"> FARE </h1> <h1 className="dash">DASH </h1>
 				<ul class="nav-list">
                     <Link to={'/'}>
 						
