@@ -75,6 +75,23 @@ function HomePage(){
               </p>
               </div>
            </div>
+           <div className='stats'>
+             <div className='stat1'>
+               <h4>1,000+ Alerts</h4>
+             </div>
+             <div className='stat2'>
+               <h4>300+ Users</h4>
+             </div>
+             <div className='stat3'></div>
+          <h4>100+ Stations</h4>
+           </div>
+           {/* <div className='services'>
+             <h3>WERE ON A MISSION TO MAKE THE WORLD A BETTER PLACE....</h3>
+             <p><b>We believe in public information for the good of the public</b></p>
+             <p>By being able to act on real time alerts low income mta riders are to be aware of police presence in subway stations to avoid high fines. </p>
+             <p>We believe in giving people a way to use their phones to be aware and keep each other aware. </p>
+
+           </div> */}
 
 
         </div>

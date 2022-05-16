@@ -1,7 +1,7 @@
 import React from "react"
 import "./Components/FontAwesome"
 import SignUp from "./Components/SignUp";
-import HomePage from "./Components/HomePage";
+import HomePage from "./Components/Homepage";
 import Explore from "./Components/Explore";
 import Login from "./Components/Login"
 import {Routes, Route } from 'react-router-dom'
