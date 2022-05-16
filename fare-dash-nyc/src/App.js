@@ -1,4 +1,5 @@
 import React from "react"
+import "./Components/FontAwesome"
 import SignUp from "./Components/SignUp";
 import HomePage from "./Components/HomePage";
 import Explore from "./Components/Explore";
