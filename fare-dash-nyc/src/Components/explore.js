@@ -10,13 +10,24 @@ function Explore(){
     return(
         <div>
             <div className='container'>
+                <div className='report-container'>
             <form>
  
-    <input type="text" placeholder='search a station ' name="name" />
- 
-  <input type="submit" value="Submit" />
+    <input className='report-input' type="text" placeholder='search a station ' name="name" />
 </form>
+<div className='reports'>
+    <h5>Undercover Police</h5>
+    <p><b>34th St Station </b></p>
+    <p>Police spotted near NW exit, wearing a white cap</p>
+</div>
 
+<div className='reports'>
+    <h5>Undercover Police</h5>
+    <p><b>34th St Station </b></p>
+    <p>Police spotted near NW exit, wearing a white cap</p>
+</div>
+
+</div>
            
 <Map/>      
 </div>

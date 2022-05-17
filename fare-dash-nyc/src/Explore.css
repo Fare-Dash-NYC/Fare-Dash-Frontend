@@ -1,11 +1,35 @@
 
-/* .container {
+.container {
 
     display: flex;
+    /* flex-direction: column; */
   
-   justify-content: center;
-}  */
-/* .station-form{
-    border-right: 2px solid rgb(0, 0, 0);
+   justify-content: center; 
     
-} */
+}  
+.report-input{ margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    /* align-items: center; */
+    width: 25vw;
+}
+ 
+.report-container{
+     width: 30vw;
+     height: 100vh;
+     border: 3px black solid;
+}
+.reports{
+    /* border-top: 2px black solid; */
+    border-bottom: 2px black solid;
+}
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 1000px) {
+    .container   {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .report-container{
+        width: 100vw;
+    }
+  }
