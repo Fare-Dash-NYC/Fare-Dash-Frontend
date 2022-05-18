@@ -1,4 +1,7 @@
 .navbar{
+
+    display: flex;
+
     border-bottom: 2px black solid;
 }
 .fare {

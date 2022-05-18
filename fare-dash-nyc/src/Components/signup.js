@@ -1,8 +1,18 @@
 import {Row,Button,Label,Input,FormGroup,Col,Form} from 'reactstrap'
 import {Link} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from 'react';
 
 function SignUp (){
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [displayName, setDisplayName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+//   function handleInput(event){
+// setFirstName(event.target.value)
+//   }
 
     return (
 
@@ -15,7 +25,10 @@ function SignUp (){
         <Label for="firstName">
           First Name
         </Label>
-        <Input
+        <Input 
+        onChange={((event)=> {
+          setFirstName(event.target.value)
+        })}
           id="firstNae"
           name="firstname"
           placeholder="enter first name"
@@ -29,6 +42,9 @@ function SignUp (){
           Last Name
         </Label>
         <Input
+        onChange={((event )=>{
+          setLastName(event.target.value)
+        })}
           id="lastName"
           name="lastname"
           placeholder="enter last name"
@@ -44,6 +60,9 @@ function SignUp (){
           Display Name
         </Label>
         <Input
+         onChange={((event )=>{
+          setDisplayName(event.target.value)
+        })}
           id="displayName"
           name="displayName"
           placeholder="enter your display name"
@@ -58,6 +77,9 @@ function SignUp (){
       Email
     </Label>
     <Input
+     onChange={((event )=>{
+      setEmail(event.target.value)
+    })}
       id="email"
       name="email"
       placeholder="example@gmail.com"
@@ -70,6 +92,9 @@ function SignUp (){
           Password
         </Label>
         <Input
+         onChange={((event )=>{
+          setPassword(event.target.value)
+        })}
           id="examplePassword"
           name="password"
           placeholder="password placeholder"

@@ -2,8 +2,10 @@
 import {Button,Label,Input,FormGroup,Form} from 'reactstrap'
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
 function Login(){
-
+ const [email, setEmail] = useState('')
+ const[password, setPassword] = useState('')
 
     return(
          <div>
@@ -17,6 +19,9 @@ function Login(){
       Email
     </Label>
     <Input
+     onChange={((event )=>{
+      setEmail(event.target.value)
+    })}
       id="exampleEmail"
       name="email"
       placeholder="something@idk.cool"
@@ -31,6 +36,9 @@ function Login(){
       Password
     </Label>
     <Input
+     onChange={((event )=>{
+      setPassword(event.target.value)
+    })}
       id="examplePassword"
       name="password"
       placeholder="don't tell!"
