@@ -1,5 +1,5 @@
 import '../HomePage.css'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {UncontrolledCarousel} from 'reactstrap'
 import {Link} from "react-router-dom"
@@ -54,18 +54,18 @@ function HomePage(){
            </div>
            <div className='facts'>
              <div className='facts-text'>
-           <FontAwesomeIcon icon="fa-solid fa-bell" />
+           {/* <FontAwesomeIcon icon="fa-solid fa-bell" /> */}
              <p>92% of the 481 fare evasion arrests in the fourth quarter of 2019 were of non-whi
                te riders; 60% were black. Data like that led New York Attorney General Letitia James to announce a probe of 
                racial disparities in fare evasion stops. </p>
 </div>
 <div className='facts-text'>
-<FontAwesomeIcon icon="fa-solid fa-bell" />
+{/* <FontAwesomeIcon icon="fa-solid fa-bell" /> */}
              <p>Fare evasion is in large part “a function of poverty and inconvenience.” People arrested for fare evasion 
                rely on public defenders, a pretty good sign they are struggling to make ends meet.</p>
                </div>
                <div className='facts-text'>
-               <FontAwesomeIcon icon="fa-solid fa-bell" />
+               {/* <FontAwesomeIcon icon="fa-solid fa-bell" /> */}
               <p>Antiquated broken windows policing strategies that crimilize 
                 the poor at the turnstile do not begin to address any of the root 
                 problems playing out at the turnstile. They do not make transit more affordable.
