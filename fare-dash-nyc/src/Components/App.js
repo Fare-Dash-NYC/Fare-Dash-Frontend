@@ -1,12 +1,12 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SignUp from "./Components/SignUp";
-import HomePage from "./Components/HomePage";
-import Explore from "./Components/Explore";
-import Login from "./Components/Login"
+import SignUp from "./SignUp";
+import HomePage from "./Homepage";
+import Explore from "./Explore";
+import Login from "./Login"
 import {Routes, Route, Router} from 'react-router-dom'
-import './App.css';
-import NavBar from "./Components/NavBar";
+import '../App.css';
+import NavBar from "./NavBar";
 
 
   
