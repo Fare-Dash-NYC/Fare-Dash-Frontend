@@ -1,17 +1,25 @@
 import React, {  useState, useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 import '../Map.css'
-
+import "mapbox-gl/dist/mapbox-gl.css"
 
 
 
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoia2hhbGlhcDI2IiwiYSI6ImNsMzd1YzIwYjNuanozZG81Y3g5N3Y5ZWcifQ.vNMICCpCjPcoSz5fqstmJA';
 
+
+
+const Popup = ({ routeName, routeNumber, city, type }) => (
+  <div className="popup">
+    <h3 className="route-name">{routeName}</h3>
+  </div>
+)
 function Map(){
  
 
     const mapContainer = useRef(null);
+    const popupRef = useRef(new mapboxgl.Popup({offset:15}))
     const map = useRef(null);
     const [lng, setLng] = useState(-73.944160);
     const [lat, setLat] = useState(40.678177);
@@ -24,13 +32,11 @@ function Map(){
           center: [lng, lat],
           zoom: zoom
         });
-      //   new mapboxgl.Marker({color: "#FFFFFF",
-      // draggable: true
-      // })
-      // .setLngLat([ -73.98676800153976, 40.75461199851542])
-      // .addTo(map);
       
       });
+    
+
+
 
       useEffect(() => {
         if (!map.current) return; // wait for map to initialize

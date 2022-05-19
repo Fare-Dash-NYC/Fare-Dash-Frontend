@@ -1,29 +1,54 @@
-.mission-section{
-    display: flex;
-/* width: 100px; */
-/* width: 500px; */
-    color: rgb(0, 0, 0);
-    align-items: center;
-   justify-content: center;
-   margin-bottom: 200px;
+.bg-img{
+
+    -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+    filter: blur(3px);
+ 
+  background-repeat: no-repeat;
+
+  width: 100vw;
+  height: 700px;
+  
+
+
   
 } 
-.btn-container{
-    text-align: center;
+.top-container{
+    margin-bottom: 150px;
 }
-.report-btn {
-/* align-items: center; */
-    
 
-    background-color: white;
-margin: 100px;
+.mission h1 {
+
+    position: absolute;
+   background-color: transparent;
+   color: white;
+    top: 30%;
+    left: 31%;
+   
+    transform: translate(-50%, -50%); 
 }
-.mission{
-    width: 600px;
+.mission p{
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    font-weight:800;
+    margin-left: 45px;
+   width: 500px;
+    top: 40%;
+    left: 5%;
 }
-.carousel{
-    width: 600px;
+.mission button{
+    position: absolute;
+border: none;
+color:  #003AA4;
+padding: 20px;
+border-radius: 3px;
+    top: 70%;
+    left:10%;
+
 }
+
+
+
 
 .facts {
     display: flex;
@@ -42,23 +67,69 @@ margin: 100px;
     margin-bottom: 100px;
     /* padding-bottom: 15px; */
 }
+
+
+.column {
+    float: left;
+    width: 25%;
+   height: auto;
+    padding: 0 0px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
 .stats {
     display: flex;
+
     justify-content: space-around;
-  
+    padding: 70px;
+    border-top: 1px black solid;
+  border-bottom: 1px black solid;
     margin-bottom: 150px;
    
 }
-@media screen and (max-width: 900px) {
-.carousel{
-    display: none;
+.services{
+
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-bottom: 100px;
 }
-}
-@media screen and (max-width: 1060px) {
+
+@media screen and (max-width: 1080px) {
 .facts{
     display: flex;
     flex-direction: column;
 }
+/* .stats{
+    display: flex;
+    flex-direction: column;
+} */
 }
 
 

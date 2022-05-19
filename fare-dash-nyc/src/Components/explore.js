@@ -11,10 +11,10 @@ function Explore(){
         <div>
             <div className='container'>
                 <div className='report-container'>
-            <form>
+            {/* <form>
  
     <input className='report-input' type="text" placeholder='search a station ' name="name" />
-</form>
+</form> */}
 <div className='reports'>
     <h5>Undercover Police</h5>
     <p><b>34th St Station </b></p>

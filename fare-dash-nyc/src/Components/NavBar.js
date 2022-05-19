@@ -15,12 +15,16 @@ function NavBar(){
                     <Link to={'/explore'}>
 					<li>Explore</li>
                     </Link>
+					<Link to={'/report'}>
+					<li>Make A Report</li>
+                    </Link>
                     <Link to={'/login'}>
 					<li>Login</li>
                     </Link>
                     <Link to={'/signup'}>
 					<li>Sign Up</li>
                     </Link>
+					
 				</ul>
 
 			
