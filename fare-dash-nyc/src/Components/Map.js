@@ -10,16 +10,16 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoia2hhbGlhcDI2IiwiYSI6ImNsMzd1YzIwYjNuanozZG81Y
 
 
 
-const Popup = ({ routeName, routeNumber, city, type }) => (
-  <div className="popup">
-    <h3 className="route-name">{routeName}</h3>
-  </div>
-)
+// const Popup = ({ routeName, routeNumber, city, type }) => (
+//   <div className="popup">
+//     <h3 className="route-name">{routeName}</h3>
+//   </div>
+// )
 function Map(){
  
 
     const mapContainer = useRef(null);
-    const popupRef = useRef(new mapboxgl.Popup({offset:15}))
+    // const popupRef = useRef(new mapboxgl.Popup({offset:15}))
     const map = useRef(null);
     const [lng, setLng] = useState(-73.944160);
     const [lat, setLat] = useState(40.678177);

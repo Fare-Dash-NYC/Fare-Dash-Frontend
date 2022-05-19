@@ -1,76 +1,91 @@
-import React from "react"
+import React, { useState } from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import {
     FormGroup, Label, Input,
     Button, Form
 } from 'reactstrap';
-import "../Styles/index.css"
+
+
+
+
+
+// SubwayStations.forEach(station => {
+//   let stationName = station.name
+//   console.log(stationName)
+// })
   
+
+
+
+
+  
+const url = 'http://localhost:8081/reports'
+
 function Report() {
-  
+const [reportForm, setReportForm] =useState({
+  station:"",
+  reportType:"",
+  details: ""
+
+})
+const handleReportFormChange = (event) => {
+  event.preventDefault();
+  setReportForm({
+    ...reportForm,
+    [event.target.name]: event.target.value,
+  });
+};
+
+const handleReportForm = async (event) => {
+  event.preventDefault();
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: JSON.stringify(reportForm),
+  });
+}
+
+
+
     return (
         <div className="form">
-        
-      <Form>
+  
+      <Form onSubmit={handleReportForm}>
     <h1> Make A Report</h1>
 
         <FormGroup>
-          <Label for="exampleSelect">Select Station</Label>
-          <Input type="select" name="select" id="exampleSelect">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+          <Label for="exampleSelect">Station</Label>
+          <Input placeholder="Station to make a report" onChange={handleReportFormChange} type="text" name="station" id="exampleSelect"/>
+           
+          
+        </FormGroup>
+        <FormGroup>
+          <Label for="exampleSelect">Select report type </Label>
+          <Input onChange={handleReportFormChange}  type="select" name="reportType" id="exampleSelect">
+            <option>Undercover police Spotted</option>
+            <option>Police Officer Hiding</option>
+            <option>Mulitple Police Officers Spotted</option>
+            <option>1-4 police Officers Spotted</option>
+            <option>Other</option>
           </Input>
         </FormGroup>
-
-
         <FormGroup>
-          <Label for="exampleSelectMulti">Select Borough</Label>
-          <Input type="select" name="selectMulti" id="exampleSelectMulti" multiple>
-            <option>Queens</option>
-            <option>Brooklyn</option>
-            <option>Manhattan</option>
-            <option>Staten Island</option>
-            <option>Bronx</option>
-          </Input>
+          <Label for="exampleText" >Add more details</Label>
+          <Input onChange={handleReportFormChange}  type="textarea" placeholder="Add more deatils to your report Ex. Police hiding in the NW exit" name="details" id="exampleText" />
         </FormGroup>
 
 
-        <FormGroup>
-          <Label for="exampleText">Add more details</Label>
-          <Input type="textarea" name="text" id="exampleText" />
-        </FormGroup>
 
-
-        <FormGroup>
-          <Label for="exampleFile">Upload A File</Label>
-          <Input type="file" name="file" id="exampleFile" />
-        </FormGroup>
-
-        <FormGroup tag="fieldset">
-          <legend>Select Option</legend>
-          <FormGroup check>
-            <Label check>
-              <Input type="radio" name="radio1" />{' '}
-              Hapening Now
-            </Label>
-          </FormGroup>
-          <FormGroup check>
-            <Label check>
-              <Input type="radio" name="radio1" />{' '}
-              Resolved
-            </Label>
-          </FormGroup>
-        </FormGroup>
-        
         <Button>Submit Report</Button>
                 
      </Form>
    </div >
     );
 }
+
   
 export default Report;

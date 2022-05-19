@@ -17,7 +17,7 @@ function HomePage(){
          
 
            <div className='top-container'>
-             <img className='bg-img' src='https://brooklyneagle.com/wp-content/uploads/2021/03/AP17172784995527.jpg'/>
+             <img className='bg-img'  alt="" src='https://brooklyneagle.com/wp-content/uploads/2021/03/AP17172784995527.jpg'/>
              
 <div className='mission'>
                <h1>WHERE PEOPLE HELP EACH OTHER</h1>
