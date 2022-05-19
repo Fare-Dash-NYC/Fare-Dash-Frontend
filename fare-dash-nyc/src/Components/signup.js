@@ -3,17 +3,53 @@ import {Link} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 
+
+
+
+const url = 'http://localhost:8081/register'
+
+
+
 function SignUp (){
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [displayName, setDisplayName] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [signupForm, setSignUpForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    displayName:""
+  });
+  const handleSignupFormChange = (event) => {
+    event.preventDefault();
+    setSignUpForm({
+      ...signupForm,
+      [event.target.name]: event.target.value,
+    });
+  };
+ 
+  const handleRegistration = async (event) => {
+    event.preventDefault();
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify(signupForm),
+    });
+    const data = await response.json();
+   
+  };
 
-//   function handleInput(event){
-// setFirstName(event.target.value)
-//   }
 
+
+
+
+
+
+
+
+
+  
     return (
 
         <div>
@@ -26,9 +62,7 @@ function SignUp (){
           First Name
         </Label>
         <Input 
-        onChange={((event)=> {
-          setFirstName(event.target.value)
-        })}
+        onChange={handleSignupFormChange}
           id="firstNae"
           name="firstname"
           placeholder="enter first name"
@@ -42,9 +76,7 @@ function SignUp (){
           Last Name
         </Label>
         <Input
-        onChange={((event )=>{
-          setLastName(event.target.value)
-        })}
+        onChange={handleSignupFormChange}
           id="lastName"
           name="lastname"
           placeholder="enter last name"
@@ -60,9 +92,7 @@ function SignUp (){
           Display Name
         </Label>
         <Input
-         onChange={((event )=>{
-          setDisplayName(event.target.value)
-        })}
+         onChange={handleSignupFormChange}
           id="displayName"
           name="displayName"
           placeholder="enter your display name"
@@ -77,9 +107,7 @@ function SignUp (){
       Email
     </Label>
     <Input
-     onChange={((event )=>{
-      setEmail(event.target.value)
-    })}
+     onChange={handleSignupFormChange}
       id="email"
       name="email"
       placeholder="example@gmail.com"
@@ -92,9 +120,7 @@ function SignUp (){
           Password
         </Label>
         <Input
-         onChange={((event )=>{
-          setPassword(event.target.value)
-        })}
+         onChange={handleSignupFormChange}
           id="examplePassword"
           name="password"
           placeholder="password placeholder"
@@ -106,7 +132,7 @@ function SignUp (){
   </Row>
   
 <Link to={'/explore'}>
-  <Button>
+  <Button onSubmit={handleRegistration}>
    Create Account
   </Button>
   </Link>

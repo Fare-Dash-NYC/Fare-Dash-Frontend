@@ -28,38 +28,7 @@ function HomePage(){
 </button>
 </Link>
 </div>
-{/* <div class="row">
-  <div class="column">
-    <div class="card">
-      <h3>Card 1</h3>
-      <p>92% of the 481 fare evasion arrests in the fourth quarter of 2019 were of non-whi
-               te riders; 60% were black. Data like that led New York Attorney General Letitia James to announce a probe of 
-               racial disparities in fare evasion stops.            </p>
-      
-    </div>
-  </div>
 
-  <div class="column">
-    <div class="card">
-      <h3>Card 2</h3>
-      <p>Fare evasion is in large part “a function of poverty and inconvenience.” People arrested for fare evasion 
-               rely on public defenders, a pretty good sign they are struggling to make ends meet.</p>
-      
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <h3>Card 3</h3>
-     
-      <p>Antiquated broken windows policing strategies that crimilize 
-                the poor at the turnstile do not begin to address any of the root 
-                problems playing out at the turnstile. They do not make transit more affordable.
-                They do not make it easier for riders to pay. They do  not reduce police bias,
-                but rather enable.</p>
-    </div>
-  </div>
-    </div> */}
            </div> 
            <div className='facts'>
              <div className='facts-text'>
