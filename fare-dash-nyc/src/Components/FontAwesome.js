@@ -1,6 +1,6 @@
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 
-import {faBell} from '@fortawesome/free-solid-svg-icons'
+import {faBrain} from '@fortawesome/free-solid-svg-icons'
 
-library.add(faBell)
+library.add(faBrain)
