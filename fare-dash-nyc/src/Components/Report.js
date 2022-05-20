@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useNavigate } from "react-router-dom";
+
 // import { Link } from "react-router-dom";
 import {
     FormGroup, Label, Input,
@@ -23,6 +25,7 @@ import {
 const url = 'http://localhost:8081/reports'
 
 function Report() {
+const navigate = useNavigate()
 const [reportForm, setReportForm] =useState({
   station:"",
   reportType:"",
@@ -47,6 +50,8 @@ const handleReportForm = async (event) => {
     },
     body: JSON.stringify(reportForm),
   });
+  navigate("/explore", {replace: true})
+
 }
 
 
