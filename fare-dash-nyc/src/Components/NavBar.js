@@ -46,7 +46,7 @@ function NavBar(){
 					<li class="navbar-brand nav-link">Login</li>
                     </Link>
                     <Link to={'/signup'}>
-					<li class="navbar-brand nav-link">Sign Up</li>
+					<li class="navbar-brand nav-link">SignUp</li>
                     </Link>
       </ul>
     </div>
