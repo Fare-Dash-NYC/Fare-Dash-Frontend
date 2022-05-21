@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useNavigate } from "react-router-dom";
+
 // import { Link } from "react-router-dom";
 import {
     FormGroup, Label, Input,
@@ -22,6 +24,7 @@ import Map2 from "./Map2";
 
   
 const url = 'http://localhost:8081/reports'
+
 
 function Report(props) {
   
@@ -50,6 +53,8 @@ const handleReportForm = async (event) => {
     },
     body: JSON.stringify(reportForm),
   });
+  navigate("/explore", {replace: true})
+
 }
 
 

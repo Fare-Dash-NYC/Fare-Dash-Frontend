@@ -1,22 +1,19 @@
-import {Row,Button,Label,Input,FormGroup,Col,Form} from 'reactstrap'
-import {Link} from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState } from 'react';
+import { Row, Button, Label, Input, FormGroup, Col, Form } from "reactstrap";
+import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
+const url = "http://localhost:8081/register";
 
-
-
-const url = 'http://localhost:8081/register'
-
-
-
-function SignUp (){
+function SignUp() {
+  const navigate = useNavigate()
   const [signupForm, setSignUpForm] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
-    displayName:""
+    displayName: "",
   });
   const handleSignupFormChange = (event) => {
     event.preventDefault();
@@ -25,7 +22,7 @@ function SignUp (){
       [event.target.name]: event.target.value,
     });
   };
- 
+
   const handleRegistration = async (event) => {
     event.preventDefault();
     const response = await fetch(url, {
@@ -37,110 +34,84 @@ function SignUp (){
       body: JSON.stringify(signupForm),
     });
     const data = await response.json();
-   
+    navigate("/explore", {replace: true})
   };
 
+  console.log(signupForm);
 
+  return (
+    <div>
+      <Form onSubmit={handleRegistration}>
+        <h1>CREATE ACCOUNT</h1>
+        <Row>
+          <Col md={6}>
+            <FormGroup>
+              <Label for="firstName">First Name</Label>
+              <Input
+                onChange={handleSignupFormChange}
+                id="firstNae"
+                name="firstName"
+                placeholder="enter first name"
+                type="name"
+              />
+            </FormGroup>
+          </Col>
+          <Col md={6}>
+            <FormGroup>
+              <Label for="lastName">Last Name</Label>
+              <Input
+                onChange={handleSignupFormChange}
+                id="lastName"
+                name="lastName"
+                placeholder="enter last name"
+                type="name"
+              />
+            </FormGroup>
+          </Col>
+        </Row>
 
+        <Col md={6}>
+          <FormGroup>
+            <Label for="displayName">Display Name</Label>
+            <Input
+              onChange={handleSignupFormChange}
+              id="displayName"
+              name="displayName"
+              placeholder="enter your display name"
+              type="displayName"
+            />
+          </FormGroup>
+        </Col>
+        <Row>
+          <Col md={6}>
+            <FormGroup>
+              <Label for="email">Email</Label>
+              <Input
+                onChange={handleSignupFormChange}
+                id="email"
+                name="email"
+                placeholder="example@gmail.com"
+              />
+            </FormGroup>
+          </Col>
+          <Col md={4}>
+            <FormGroup>
+              <Label for="examplePassword">Password</Label>
+              <Input
+                onChange={handleSignupFormChange}
+                id="examplePassword"
+                name="password"
+                placeholder="password placeholder"
+                type="password"
+              />
+            </FormGroup>
+          </Col>
+        </Row>
 
-
-
-
-
-
-
-  
-    return (
-
-        <div>
-            <Form>
-                <h1>CREATE ACCOUNT</h1>
-  <Row>
-    <Col md={6}>
-      <FormGroup>
-        <Label for="firstName">
-          First Name
-        </Label>
-        <Input 
-        onChange={handleSignupFormChange}
-          id="firstNae"
-          name="firstname"
-          placeholder="enter first name"
-          type="name"
-        />
-      </FormGroup>
-    </Col>
-    <Col md={6}>
-      <FormGroup>
-        <Label for="lastName">
-          Last Name
-        </Label>
-        <Input
-        onChange={handleSignupFormChange}
-          id="lastName"
-          name="lastname"
-          placeholder="enter last name"
-          type="name"
-        />
-      </FormGroup>
-    </Col>
-  </Row>
-  
-  <Col md={6}>
-      <FormGroup>
-        <Label for="displayName">
-          Display Name
-        </Label>
-        <Input
-         onChange={handleSignupFormChange}
-          id="displayName"
-          name="displayName"
-          placeholder="enter your display name"
-          type="displayName"
-        />
-      </FormGroup>
-    </Col>
-  <Row>
-    <Col md={6}>
-    <FormGroup>
-    <Label for="email">
-      Email
-    </Label>
-    <Input
-     onChange={handleSignupFormChange}
-      id="email"
-      name="email"
-      placeholder="example@gmail.com"
-    />
-  </FormGroup>
-    </Col>
-    <Col md={4}>
-    <FormGroup>
-        <Label for="examplePassword">
-          Password
-        </Label>
-        <Input
-         onChange={handleSignupFormChange}
-          id="examplePassword"
-          name="password"
-          placeholder="password placeholder"
-          type="password"
-        />
-      </FormGroup>
-    </Col>
- 
-  </Row>
-  
-<Link to={'/explore'}>
-  <Button onSubmit={handleRegistration}>
-   Create Account
-  </Button>
-  </Link>
-</Form>
-          
-
-        </div>
-    )
+          <Button type="submit" >Create Account</Button>
+      </Form>
+    </div>
+  );
 }
 
-export default SignUp
+export default SignUp;
