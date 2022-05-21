@@ -5,6 +5,7 @@ import {
     FormGroup, Label, Input,
     Button, Form
 } from 'reactstrap';
+import Map2 from "./Map2";
 
 
 
@@ -22,9 +23,11 @@ import {
   
 const url = 'http://localhost:8081/reports'
 
-function Report() {
+function Report(props) {
+  
+
 const [reportForm, setReportForm] =useState({
-  station:"",
+  station: "",
   reportType:"",
   details: ""
 
@@ -59,7 +62,7 @@ const handleReportForm = async (event) => {
 
         <FormGroup>
           <Label for="exampleSelect">Station</Label>
-          <Input placeholder="Station to make a report" onChange={handleReportFormChange} type="text" name="station" id="exampleSelect"/>
+          <Input placeholder="Station to make a report"  onChange={handleReportFormChange} type="text" name="station" id="exampleSelect"/>
            
           
         </FormGroup>

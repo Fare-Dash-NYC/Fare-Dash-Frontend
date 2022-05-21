@@ -1,5 +1,6 @@
 import '../Explore.css'
 import Map from './Map';
+import Map2 from './Map2';
 // import RenderReports from './RenderReports';
 // import 'mapbox-gl/dist/mapbox-gl.css';
  
@@ -17,11 +18,11 @@ function Explore(){
       
 </div>
 
-
+<Map2/>
 
 
            
-<Map/>      
+{/* <Map/>       */}
 </div>
         </div>
     ) 
