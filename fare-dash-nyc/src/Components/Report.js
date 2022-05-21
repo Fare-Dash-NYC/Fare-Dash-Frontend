@@ -27,6 +27,7 @@ const url = 'http://localhost:8081/reports'
 
 
 function Report(props) {
+  const navigate = useNavigate()
   
 
 const [reportForm, setReportForm] =useState({
