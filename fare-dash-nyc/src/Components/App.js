@@ -10,13 +10,30 @@ import '../App.css';
 import NavBar from "./NavBar";
 
 
-  
+  const url ='http://localhost:8081/'
 function App() {
+	// const AllStations = async (event) => {
+	// 	event.preventDefault();
+	// 	const response = await fetch(url, {
+	// 	  method: "POST",
+	// 	  headers: {
+	// 		"Content-Type": "application/json",
+			
+	// 	  },
+		 
+	// 	});
+	// 	// const data = await response.json();
+	   
+	//   };
+
+
+
 
   return(
 
     <div>
 			<NavBar/>
+			{/* <AllStations/> */}
 
 			<Routes>
 				<Route path="/" element={<HomePage/>}/>
