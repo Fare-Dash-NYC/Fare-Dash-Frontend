@@ -1,5 +1,4 @@
 import {useState, useEffect, React } from "react";
-import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SignUp from "./Components/SignUp";
 import HomePage from "./Components/Homepage";
@@ -58,7 +57,7 @@ function App() {
             !isAuthenticated ? (
               <Login setAuth={setAuth} />
             ) : (
-              <Navigate replace to="/explore" />
+              <Navigate replace to="/report" />
             )
           }
         />
