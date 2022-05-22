@@ -32,8 +32,8 @@ function Login({setAuth}) {
     });
     const data = await response.json();
     console.log(data.token);
-    if (data.toke) {
-      localStorage.setItem("token", data.token);
+    if (data.token) {
+      window.localStorage.setItem("token", data.token);
       setAuth(true);
     } else {
       setAuth(false);

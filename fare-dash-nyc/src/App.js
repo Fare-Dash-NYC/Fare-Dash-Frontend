@@ -21,7 +21,7 @@ function App() {
 		try {
 		  const res = await fetch(`${url}/is-verify`, {
 			method: "POST",
-			headers: { token: localStorage.token }
+			headers: { token: window.localStorage.getItem("token") }
 		  });
 	
 		  const response = await res.json();
@@ -57,7 +57,7 @@ function App() {
             !isAuthenticated ? (
               <Login setAuth={setAuth} />
             ) : (
-              <Navigate replace to="/report" />
+              <Navigate replace to="/explore" />
             )
           }
         />
