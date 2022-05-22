@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const url = "http://localhost:8081";
 
-function Login() {
+function Login({setAuth}) {
   const navigate = useNavigate();
   const [LogInForm, setLogInForm] = useState({
     email: "",
@@ -32,6 +32,12 @@ function Login() {
     });
     const data = await response.json();
     console.log(data.token);
+    if (data.toke) {
+      localStorage.setItem("token", data.token);
+      setAuth(true);
+    } else {
+      setAuth(false);
+    }
     navigate("/explore", { replace: true });
   };
 
