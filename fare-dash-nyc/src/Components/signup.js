@@ -34,10 +34,10 @@ function SignUp() {
       body: JSON.stringify(signupForm),
     });
     const data = await response.json();
+    console.log(data.token)
     navigate("/explore", {replace: true})
   };
 
-  console.log(signupForm);
 
   return (
     <div>
