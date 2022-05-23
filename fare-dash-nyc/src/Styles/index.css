@@ -16,16 +16,20 @@ code {
 }
 
 form{
-  resize: both;
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* resize: both; */
+  /* overflow: auto; */
   /* opacity: 0.9; */
   /* border: 5px solid rgb(15, 9, 9); */
-  width: 700px;
-  height: 700px;
+  /* width: 700px;
+  height: 700px; */
   background-color: white;
   display: grid;
-  place-content: center;
-  position: relative;
-  left: 350px;
-  top: 50px;
+  /* place-content: center; */
+  /* position: relative; */
+  /* left: 350px; */
+  /* top: 50px; */
   }

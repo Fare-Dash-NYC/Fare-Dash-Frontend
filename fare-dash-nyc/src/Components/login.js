@@ -1,6 +1,5 @@
 import { Button, Label, Input, FormGroup, Form } from "reactstrap";
-import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -44,8 +43,8 @@ function Login({setAuth}) {
   return (
     <div>
       <Form inline onSubmit={handleLogIn}>
-        <h1>LOG IN</h1>
-        <FormGroup className="mb-2 me-sm-2 mb-sm-0">
+        <h1 className="mt-5 text-center">LOG IN</h1>
+        <FormGroup >
           <Label className="me-sm-2" for="exampleEmail">
             Email
           </Label>
@@ -55,9 +54,10 @@ function Login({setAuth}) {
             name="email"
             placeholder="something@idk.cool"
             type="email"
+            className="form-control my-3"
           />
         </FormGroup>
-        <FormGroup className="mb-2 me-sm-2 mb-sm-0">
+        <FormGroup >
           <Label className="me-sm-2" for="examplePassword">
             Password
           </Label>
@@ -67,9 +67,11 @@ function Login({setAuth}) {
             name="password"
             placeholder="don't tell!"
             type="password"
+            className="form-control my-3"
+
           />
         </FormGroup>
-        <Button type="submit">Log in</Button>
+        <Button type="submit" class="btn btn-success btn-block">Log in</Button>
       </Form>
     </div>
   );
