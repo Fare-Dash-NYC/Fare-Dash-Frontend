@@ -1,18 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { FormGroup, Label, Input, Button, Form } from "reactstrap";
 import Map2 from "./Map2";
 
 
 const url = "http://localhost:8081/reports";
+function useQuery() {
+  const { search } = useLocation();
 
-function Report(props) {
- console.log( props.station )
+  return new URLSearchParams((search), [search]);
+}
+
+function Report() {
+  let query =  useQuery()
+
   const navigate = useNavigate();
 
+  
   const [reportForm, setReportForm] = useState({
-    station: "",
+    station: query.get("name"),
     reportType: "",
     details: "",
   });
@@ -46,6 +53,7 @@ function Report(props) {
           <Label for="exampleSelect">Station</Label>
           <Input
             placeholder="Station to make a report"
+            value={reportForm.station}
             onChange={handleReportFormChange}
             type="text"
             name="station"

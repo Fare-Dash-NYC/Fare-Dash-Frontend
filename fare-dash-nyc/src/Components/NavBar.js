@@ -1,26 +1,55 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { FaBars } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
 import "../Navbar.css";
 function NavBar() {
-    
-const [active, setActive] = useState("nav__menu");
-  const [icon, setIcon] = useState("nav__toggler");
-  const navToggle = () => {
-    if (active === "nav__menu") {
-      setActive("nav__menu nav__active");
-    } else setActive("nav__menu");
+  // const [active, setActive] = useState("nav__menu");
+  //   const [icon, setIcon] = useState("nav__toggler");
+  //   const navToggle = () => {
+  //     if (active === "nav__menu") {
+  //       setActive("nav__menu nav__active");
+  //     } else setActive("nav__menu");
 
-    // Icon Toggler
-    if (icon === "nav__toggler") {
-      setIcon("nav__toggler toggle");
-    } else setIcon("nav__toggler");
-  };
+  //     // Icon Toggler
+  //     if (icon === "nav__toggler") {
+  //       setIcon("nav__toggler toggle");
+  //     } else setIcon("nav__toggler");
+  //   };
+
+  const [Mobile, setMobile] = useState(false);
   return (
-      <nav class="nav">
-        
-          
-          
-            <Link to={"/"}>
+    //   <nav class="nav">
+
+            
+
+    //         <ul className={active}>
+    //           <Link to={"/"}>
+    //             <li className="nav__item">Home</li>
+    //           </Link>
+    //           <Link to={"/explore"}>
+    //             <li className="nav__item">Explore</li>
+    //           </Link>
+    //           <Link to={"/report"}>
+    //             <li className="nav__item">Report</li>
+    //           </Link>
+    //           <Link to={"/login"}>
+    //             <li className="nav__item">Login</li>
+    //           </Link>
+    //           <Link to={"/signup"}>
+    //             <li className="nav__item">SignUp</li>
+    //           </Link>
+    //         </ul>
+    //         <div onClick={navToggle} className={icon}>
+    //     <div className="line1"></div>
+    //     <div className="line2"></div>
+    //     <div className="line3"></div>
+    //   </div>
+
+    //   </nav>
+    <>
+      <nav className="navbar">
+      <Link to={"/"}>
               <svg
                 height="35"
                 viewBox="0 0 72 16"
@@ -49,31 +78,38 @@ const [active, setActive] = useState("nav__menu");
                 />
               </svg>
             </Link>
-
-            <ul className={active}>
-              <Link to={"/"}>
-                <li className="nav__item">Home</li>
-              </Link>
-              <Link to={"/explore"}>
-                <li className="nav__item">Explore</li>
-              </Link>
-              <Link to={"/report"}>
-                <li className="nav__item">Report</li>
-              </Link>
-              <Link to={"/login"}>
-                <li className="nav__item">Login</li>
-              </Link>
-              <Link to={"/signup"}>
-                <li className="nav__item">SignUp</li>
-              </Link>
-            </ul>
-            <div onClick={navToggle} className={icon}>
-        <div className="line1"></div>
-        <div className="line2"></div>
-        <div className="line3"></div>
-      </div>
-        
+        {/*
+        if large screen ma xa bhane Mobile add huxa
+        if mobile screen ma xa bhane nav-links-mobile add huxa
+        */}
+        <ul
+          className={Mobile ? "nav-links-mobile" : "nav-links"}
+          onClick={() => setMobile(false)}
+        >
+          <Link to={"/"}>
+            <li className="nav__item">Home</li>
+          </Link>
+          <Link to={"/explore"}>
+            <li className="nav__item">Explore</li>
+          </Link>
+          <Link to={"/report"}>
+            <li className="nav__item">Report</li>
+          </Link>
+          <Link to={"/login"}>
+            <li className="nav__item">Login</li>
+          </Link>
+          <Link to={"/signup"}>
+            <li className="nav__item">SignUp</li>
+          </Link>
+        </ul>
+        {/* 
+        whenever we click on button = setMobile(!Mobile) ==  is mobile oppsite to setMobile 
+        */}
+        <button className="mobile-menu-icon" onClick={() => setMobile(!Mobile)}>
+          {Mobile ? <ImCross /> : <FaBars />}
+        </button>
       </nav>
+    </>
   );
 }
 export default NavBar;

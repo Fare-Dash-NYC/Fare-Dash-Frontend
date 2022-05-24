@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const url = "http://localhost:8081/register";
 
-function SignUp() {
+function SignUp({setAuth}) {
   const navigate = useNavigate()
   const [signupForm, setSignUpForm] = useState({
     firstName: "",
@@ -35,7 +35,14 @@ function SignUp() {
     });
     const data = await response.json();
     console.log(data.token)
-    navigate("/explore", {replace: true})
+    if (data.token) {
+      window.localStorage.setItem("token", data.token);
+      setAuth(true);
+      navigate("/explore", {replace: true})
+    } else {
+      setAuth(false);
+    }
+    
   };
 
 
