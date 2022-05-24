@@ -20,7 +20,7 @@ function Report() {
   
   const [reportForm, setReportForm] = useState({
     station: query.get("name"),
-    reportType: "",
+    reportType: "Undercover police Spotted",
     details: "",
   });
   const handleReportFormChange = (event) => {
@@ -33,6 +33,10 @@ function Report() {
 
   const handleReportForm = async (event) => {
     event.preventDefault();
+    console.log()
+    // if(reportForm.reportType = ""){
+    //   setReportForm.reportType
+    // }
     const response = await fetch(url, {
       method: "POST",
       headers: {
@@ -64,6 +68,7 @@ function Report() {
           <Label for="exampleSelect">Select report type </Label>
           <Input
             onChange={handleReportFormChange}
+            // value="Undercover police Spotted"
             type="select"
             name="reportType"
             id="exampleSelect"

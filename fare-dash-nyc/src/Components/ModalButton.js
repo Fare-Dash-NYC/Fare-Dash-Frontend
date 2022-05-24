@@ -4,7 +4,6 @@ import Report from "./Report"
 
 function ModalButton(props){
     const {stationName} = props
-    console.log(stationName)
     return (
         <div>
             <Link to={`/report?name=${stationName}`}>

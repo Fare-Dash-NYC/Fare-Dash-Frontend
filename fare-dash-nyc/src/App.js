@@ -1,6 +1,6 @@
 import {useState, useEffect, React } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import SignUp from "./Components/SignUp";
+import SignUp from "./Components/Signup";
 import HomePage from "./Components/Homepage";
 import Explore from "./Components/Explore";
 import Report from "./Components/Report";
