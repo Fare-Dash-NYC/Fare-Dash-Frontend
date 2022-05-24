@@ -48,7 +48,7 @@ function App() {
 
   return (
     <div>
-      <NavBar />
+      <NavBar setAuth={setAuth} isAuthenticated={isAuthenticated} />
 
       <Routes>
         <Route path="/" element={<HomePage />} />

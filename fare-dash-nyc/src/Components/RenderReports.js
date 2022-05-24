@@ -10,7 +10,6 @@ function RenderReports({reports}) {
 
   return (
     <ul>
-        <li>hello</li>
       <li>
         <h4>{reports.station_name} </h4>
         <h6>{reports.incident}</h6>

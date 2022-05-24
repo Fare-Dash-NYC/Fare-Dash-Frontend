@@ -1,6 +1,6 @@
 .map-container {
-    width:700px ;
-    height: 700px;
+    width: 100vw ;
+    height: 90vh;
   }
   
   @media screen and (max-width: 1000px) {

@@ -2,13 +2,7 @@ import { useEffect, useState } from "react";
 import "../Explore.css";
 import Map2 from "./Map2";
 import * as React from "react";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import RenderReports from "./RenderReports";
+import { DateTime } from "luxon";
 
 const url = "http://localhost:8081/reports";
 
@@ -22,36 +16,25 @@ function Explore() {
   }, []);
 
   return (
-    <div>
-      <div className="container">
+    <div className="container">
+        <Map2 />
         <div className="reports">
-          <h2>Search station reports</h2>
+          <h2 className="search-reports">Recent Reports</h2>
           {reports.map((report) => {
             return (
-                <Card sx={{ minWidth: 275 }}>
-      <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.primary">
-        {report.station_name}
-        </Typography>
-        <Typography variant="body2">
-          {report.incident}
-          <br />
-          {report.more_details}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+              <ul>
+              <li className="report-card">
+                <p>{DateTime.fromISO(report.timestamp).toRelative()}</p>
+                <h4>{report.station_name} <i class="fa-solid fa-train-subway" style={{color: "grey"}}></i></h4>
+                <h6>{report.incident}</h6>
+                <p>{report.more_details}</p>
+              </li>
+            </ul>
               );
           })}
         </div>
-        <Map2 />
       </div>
-    </div>
+    
   );
 }
 export default Explore;
