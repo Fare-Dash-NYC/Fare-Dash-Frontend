@@ -1,12 +1,7 @@
- 
 .container {
-
-    display: flex;
-  
-  
-   justify-content: center; 
-    
-}   
+  display: flex;
+  justify-content: center;
+}
 /* 
  
 .report-container{
@@ -20,11 +15,13 @@
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 1000px) {
-    .container   {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-    .report-container{
-        width: 100vw;
-    }
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    z-index: -2;
   }
+  .report-container {
+    width: 100vw;
+    height: 100vh;
+  }
+}
