@@ -60,9 +60,9 @@ const [active, setActive] = useState("nav__menu");
               <Link to={"/report"}>
                 <li className="nav__item">Report</li>
               </Link>
-              <Link to={"/login"}>
+              {/* <Link to={"/login"}>
                 <li className="nav__item">Login</li>
-              </Link>
+              </Link> */}
               <Link to={"/signup"}>
                 <li className="nav__item">SignUp</li>
               </Link>
