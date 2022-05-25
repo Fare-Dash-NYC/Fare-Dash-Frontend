@@ -47,7 +47,7 @@ function App() {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="main-container">
       <NavBar setAuth={setAuth} isAuthenticated={isAuthenticated} />
 
       <Routes>
