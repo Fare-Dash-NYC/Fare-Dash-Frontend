@@ -67,7 +67,7 @@ function ModalButton(props) {
         onHide={handleClose}
       >
         <Modal.Header className="modal-form" closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Create Report</Modal.Title>
         </Modal.Header>
         <Modal.Body className="modal-form">
           <Form className="modal-form" onSubmit={handleReportForm}>
@@ -126,7 +126,7 @@ function ModalButton(props) {
               onClick={handleClose}
               type="submit"
             >
-              Make report
+              Submit
             </Button>
           </Form>
         </Modal.Body>

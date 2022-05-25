@@ -130,7 +130,7 @@ function SignUp({setAuth}) {
         />
         </Row>
         <div className="link">
-        <h5>Already A Member?</h5> <Link to={'/login'}><h5 style={{paddingLeft:'0'}}><a href="">Login here</a> </h5>
+        <h5>Already A Member?&nbsp;</h5> <Link to={'/login'}><h5 style={{paddingLeft:'0'}}><a href="">Login here</a> </h5>
         </Link>
         </div>
         <Col >

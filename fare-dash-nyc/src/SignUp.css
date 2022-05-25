@@ -25,7 +25,7 @@ position: relative;
      padding-left: 8rem;
      background-image: linear-gradient(to right, 
    
-     rgba(0,0,0,.9) 40%,
+     rgba(0,0,0,.9) 50%,
   
   
     rgba(0,0,0,.3)65%,
@@ -59,8 +59,7 @@ position: relative;
    
     height: 35px;
     width: 200px;
-    border: 1px white solid;
-    background-color: white;
+    background-color: rgb(247, 49, 0);
     color: black;
     border-radius: 20px;
     margin-top: 25px;
