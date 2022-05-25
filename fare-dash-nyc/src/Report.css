@@ -1,0 +1,15 @@
+.modal-form{
+    background-color: black;
+    color: brown;
+}
+.modal-button{
+  
+
+margin-left: 20px;
+    background-color: brown;
+    border: none;
+}
+
+.modal-button:hover{
+background-color: rgb(201,106,17);
+}
