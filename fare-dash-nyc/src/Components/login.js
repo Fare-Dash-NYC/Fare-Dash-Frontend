@@ -74,7 +74,7 @@ function Login({setAuth}) {
 
           />
           <div className="link">
-        <h5>Not A Member Yet?</h5>
+        <h5>Not A Member Yet?&nbsp;</h5>
         <Link to={'/signup'}>
         <h5 style={{paddingLeft:'0'}}><a href="">Sign Up</a> </h5></Link>
       </div>  <button type="submit" class="btn btn-success btn-block">Log in</button>

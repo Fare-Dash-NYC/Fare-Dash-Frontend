@@ -41,6 +41,12 @@
   padding: 10px;
 }
 
+.reports {
+  /* position: fixed;
+  overflow: hidden;
+  overflow-y:scroll */
+}
+
 
 .search-reports{
   padding: 10px;
@@ -58,6 +64,5 @@
   }
   .reports {
     width: 90vw;
-    height: 100vh;
   }
 }
