@@ -54,10 +54,13 @@ function ModalButton(props) {
 
   return (
     <div>
-      {/* <Link to={`/report?name=${stationName}`}>  */}
-      <button onClick={handleShow}> Make a report at this station</button>
-
-      {/* </Link>  */}
+     
+      <div style={{textAlign:'center'}}>
+<button 
+      style={{backgroundColor:"brown", padding:'5px', borderRadius:'20px', alignItems:'center'}}
+       onClick={handleShow}> Make a report </button>
+</div>
+   
       <Modal
         style={{ backgroundColor: "transparent" }}
         show={show}

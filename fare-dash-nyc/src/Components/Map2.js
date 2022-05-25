@@ -43,9 +43,9 @@ function Map2() {
           ]}
           icon={train}
         >
-          <Popup>
-            <h6>{stations.name}</h6>
-            <p>{stations.line}</p>
+          <Popup className="popup-modal" style={{backgroundColor:'black'}}>
+            <h6 className="popup-name">{stations.name}</h6>
+            <p className="popup-line">Available trains: {stations.line}</p>
             <ModalButton stationName={stations.name} />
           </Popup>
         </Marker>
