@@ -6,6 +6,10 @@ import "leaflet/dist/leaflet.css";
 import { Icon } from "leaflet";
 import '../Map.css'
 
+
+
+
+
 function Map2() {
   const train = new Icon({
     iconUrl:

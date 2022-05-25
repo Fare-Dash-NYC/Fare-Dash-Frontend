@@ -4,7 +4,7 @@ import {Button,Modal, Form} from 'react-bootstrap'
 import {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate, useLocation } from "react-router-dom";
-
+import "../Report.css"
 
 const url = "http://localhost:8081/reports";
 function useQuery() {
@@ -63,15 +63,15 @@ function ModalButton(props){
              <button onClick={handleShow}> Make a report at this station</button>
           
               {/* </Link>  */}
-              <Modal style={{backgroundColor:'transparent'}} show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+              <Modal  style={{backgroundColor:'transparent'}} show={show} onHide={handleClose}>
+        <Modal.Header className="modal-form" closeButton>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <Form onSubmit={handleReportForm}>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Modal.Body className="modal-form">
+          <Form className="modal-form" onSubmit={handleReportForm}>
+            <Form.Group className="mb-3 " controlId="exampleForm.ControlInput1">
               <Form.Label>Station</Form.Label>
-              <Form.Control
+              <Form.Control 
                 placeholder="Station to make a report"
                 value={stationName}
                 onChange={handleReportFormChange}
@@ -110,10 +110,10 @@ function ModalButton(props){
               />
             </Form.Group>
 
-            <Button variant="secondary" onClick={handleClose}>
+            <Button className="modal-button" variant="secondary" onClick={handleClose}>
             Back
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button className="modal-button" variant="primary" onClick={handleClose}>
             Make report
           </Button>
           </Form>
