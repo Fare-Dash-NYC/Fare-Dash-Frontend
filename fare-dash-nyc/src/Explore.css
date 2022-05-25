@@ -1,23 +1,28 @@
 .container {
   display: flex;
   justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
-/* 
+
  
-.report-container{
-     width: 30vw;
-     height: 100vh;
-  
+.report-card{
+  border: 3px solid rgb(201, 106, 17);
+  border-radius: 5px;
+  margin: 10;
+  padding: 10px;
 }
-.search-station{
-    border: 1px solid black;
-} */
+
+.search-reports{
+  padding: 10px;
+  font-size: 20px;
+}
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 1000px) {
   .container {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     z-index: -2;
   }
   .report-container {
