@@ -28,8 +28,8 @@ function Map2() {
       {/* mapbox://styles/khaliap26/cl3ja66zi003g16oxici6xh35 */}
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://api.mapbox.com/styles/v1/khaliap26/cl3ja66zi003g16oxici6xh35/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoia2hhbGlhcDI2IiwiYSI6ImNsMzd1YTl5aDB0NWgzZm9iOGF3YTdtaHAifQ.DrmUh3aSATfRZ3YcIE12zA"
-      />
+        url="https://api.mapbox.com/styles/v1/jjanmorales/cl3loqpt8000l15o6zbpe3wgu/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoiamphbm1vcmFsZXMiLCJhIjoiY2wza3FjcW5lMjQ1czNlcDYwZ2t0MG90NiJ9.EhVt0oaCW-Rk4UBG0j01GQ"
+   />
       {SubwayStations.map((stations) => (
         <Marker
           position={[

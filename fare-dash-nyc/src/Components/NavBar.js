@@ -59,11 +59,6 @@ function NavBar({setAuth, isAuthenticated}) {
               <li className="nav__item">Login</li>
             </Link>
           )}
-          {!isAuthenticated && (
-            <Link to={"/signup"}>
-              <li className="nav__item">SignUp</li>
-            </Link>
-          )}
           {isAuthenticated && (
             <li
               className="nav__item"
