@@ -1,29 +1,65 @@
+import { useState, useEffect } from 'react';
 import '../Explore.css'
-import Map from './Map';
+
 import Map2 from './Map2';
-// import RenderReports from './RenderReports';
-// import 'mapbox-gl/dist/mapbox-gl.css';
- 
-// let apiKey = 'pk.eyJ1Ijoia2hhbGlhcDI2IiwiYSI6ImNsMzd1YzIwYjNuanozZG81Y3g5N3Y5ZWcifQ.vNMICCpCjPcoSz5fqstmJA'
+import PostBoard from './PostBoard';
+
+
 
 function Explore(){
+    const [fetchedStations, setfetchedStations] = useState([])
+    const [inputText, setInputText] = useState('')
+    const [suggestions, setsuggestions] = useState([])
+    useEffect(()=>{
+        fetch('https://data.cityofnewyork.us/resource/kk4q-3rt2.json')
+        .then(resp => resp.json())
+        .then(data =>  {
+           data.map(stat => {
+let stationname = stat.name
+setfetchedStations(stationname)
+
+           })
+
+        })
+    },[])
+    function handleOnChange(inputText) {
+        let matches = []
+         
+        if(inputText.length > 0){
+             matches = fetchedStations.filter(name => {
+                 const regex = new RegExp(`${inputText}`,'gi')
+                return name.match(regex)
+             })
+
+        }
+
+console.log(matches)
+setsuggestions(matches)
+setInputText(inputText) 
+    }
+
 
     return(
         <div>
             <div className='container'>
                 <div className='reports'>
                 
-       <h2>Search station reports</h2>
+      
+       <input onChange={e => handleOnChange(e.target.value)}
+       value={inputText}
+        type='text' 
+        placeholder='search for a station' 
+       ></input>
+
+<PostBoard/>
        {/* <RenderReports/> */}
       
 </div>
 
 <Map2/>
 
-
-           
-{/* <Map/>       */}
 </div>
+
         </div>
     ) 
 }

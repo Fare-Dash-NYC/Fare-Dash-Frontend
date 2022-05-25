@@ -1,8 +1,12 @@
-import { Row, Button, Label, Input, FormGroup, Col, Form } from "reactstrap";
+
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import{Col,Row} from 'reactstrap'
+import "../SignUp.css"
+import { MdPermContactCalendar } from "react-icons/md";
+
 
 const url = "http://localhost:8081/register";
 
@@ -38,79 +42,101 @@ function SignUp() {
     navigate("/explore", {replace: true})
   };
 
+ 
+ 
+
+
+
+  
+     
+
 
   return (
-    <div>
-      <Form onSubmit={handleRegistration}>
-        <h1>CREATE ACCOUNT</h1>
-        <Row>
-          <Col md={6}>
-            <FormGroup>
-              <Label for="firstName">First Name</Label>
-              <Input
+    <div >
+   
+   
+         <section className="forms">
+           <div className="sign-up">
+             <div className="heading">
+                  <h1>DASH ACCOUNT<MdPermContactCalendar/></h1>
+       </div>
+     <div className="act">
+       <form onSubmit={handleRegistration}>
+     
+          <Col className="top-col" style={{marginBottom:'30px'}}>
+            
+             
+              <input
+              style={{borderRadius:"10px", textAlign:"center",height:'40px'}}
                 onChange={handleSignupFormChange}
-                id="firstNae"
+                id="firstName"
                 name="firstName"
-                placeholder="enter first name"
+                placeholder='First name'
                 type="name"
+                
               />
-            </FormGroup>
-          </Col>
-          <Col md={6}>
-            <FormGroup>
-              <Label for="lastName">Last Name</Label>
-              <Input
+            
+        
+             
+              <input
+                 style={{borderRadius:"10px", marginLeft:'30px',height:'40px', textAlign:"center"}}
                 onChange={handleSignupFormChange}
                 id="lastName"
                 name="lastName"
-                placeholder="enter last name"
+                placeholder="Last name"
                 type="name"
-              />
-            </FormGroup>
-          </Col>
-        </Row>
 
-        <Col md={6}>
-          <FormGroup>
-            <Label for="displayName">Display Name</Label>
-            <Input
-              onChange={handleSignupFormChange}
-              id="displayName"
-              name="displayName"
-              placeholder="enter your display name"
-              type="displayName"
-            />
-          </FormGroup>
-        </Col>
-        <Row>
-          <Col md={6}>
-            <FormGroup>
-              <Label for="email">Email</Label>
-              <Input
+              />
+         
+         </Col>
+        
+        <Col style={{marginBottom:'30px'}}>
+              <input
+              style={{borderRadius:"10px", textAlign:"center",height:'40px'}}
                 onChange={handleSignupFormChange}
                 id="email"
                 name="email"
-                placeholder="example@gmail.com"
+                placeholder="Email"
               />
-            </FormGroup>
-          </Col>
-          <Col md={4}>
-            <FormGroup>
-              <Label for="examplePassword">Password</Label>
-              <Input
+           
+         
+              
+              <input
+              
+              style={{borderRadius:"10px", marginLeft:'30px',textAlign:"center",height:'40px'}}
                 onChange={handleSignupFormChange}
                 id="examplePassword"
                 name="password"
-                placeholder="password placeholder"
+                placeholder="Password"
                 type="password"
-              />
-            </FormGroup>
-          </Col>
+             
+         />
+</Col>
+<Row style={{marginBottom:'30px', width:'300px'}}>
+            <input
+            style={{borderRadius:"10px", textAlign:"center", marginLeft:'70px',height:'40px'}}
+              onChange={handleSignupFormChange}
+              id="displayName"
+              name="displayName"
+              placeholder="Display name"
+              type="displayName"
+        />
         </Row>
-
-          <Button type="submit" >Create Account</Button>
-      </Form>
-    </div>
+        <div className="link">
+        <h5>Already A Member?</h5> <Link to={'/login'}><h5 style={{paddingLeft:'0'}}><a href="">Login here</a> </h5>
+        </Link>
+        </div>
+        <Col >
+         
+          <button type="submit" >Create Account</button>
+          </Col>
+      </form> 
+      </div>
+      </div>
+      </section> 
+        </div>
+    
+   
   );
 }
 

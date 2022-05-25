@@ -4,8 +4,7 @@ import ModalButton from "./ModalButton";
 import SubwayStations from "../SubwayStations";
 import "leaflet/dist/leaflet.css";
 import { Icon } from "leaflet";
-import { useState } from "react";
-
+import '../Map.css'
 function Map2() {
   const train = new Icon({
     iconUrl:
@@ -13,16 +12,22 @@ function Map2() {
     iconSize: [25, 25],
   });
   const position = [40.678177, -73.94416];
+
+
+
+ 
+
   return (
     <MapContainer
       className="map"
       center={position}
       zoom={13}
-      style={{ height: 700, width: "100%" }}
+      style={{ height: 500, width: 700 }}
     >
+      {/* mapbox://styles/khaliap26/cl3ja66zi003g16oxici6xh35 */}
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://api.mapbox.com/styles/v1/khaliap26/cl396o0at003p15o5o4umrrdd/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoia2hhbGlhcDI2IiwiYSI6ImNsMzd1YTl5aDB0NWgzZm9iOGF3YTdtaHAifQ.DrmUh3aSATfRZ3YcIE12zA"
+        url="https://api.mapbox.com/styles/v1/khaliap26/cl3ja66zi003g16oxici6xh35/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoia2hhbGlhcDI2IiwiYSI6ImNsMzd1YTl5aDB0NWgzZm9iOGF3YTdtaHAifQ.DrmUh3aSATfRZ3YcIE12zA"
       />
       {SubwayStations.map((stations) => (
         <Marker
