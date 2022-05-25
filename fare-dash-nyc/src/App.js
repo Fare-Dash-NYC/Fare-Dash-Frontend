@@ -1,6 +1,6 @@
 import {useState, useEffect, React } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import SignUp from "./Components/SignUp";
+import SignUp from "./Components/Signup";
 import HomePage from "./Components/Homepage";
 import Explore from "./Components/Explore";
 import Report from "./Components/Report";
@@ -18,14 +18,16 @@ function App() {
   
      
 	const checkAuthenticated = async () => {
+    let localToken = window.localStorage.getItem("token")
 		try {
-		  const res = await fetch(`${url}/is-verify`, {
-			method: "POST",
-			headers: { token: window.localStorage.getItem("token") }
+		  const res = await fetch(`${url}is-verify`, {
+			method: "GET",
+			headers: { Authorization: `Bearer ${localToken}`,
+      "Content-Type": "application/json" }
 		  });
 	
 		  const response = await res.json();
-	
+      console.log(response)
 		  response === true ? setIsAuthenticated(true) : setIsAuthenticated(false);
 		} catch (err) {
 		  console.error(err.message);
@@ -46,7 +48,7 @@ function App() {
 
   return (
     <div>
-      <NavBar />
+      <NavBar setAuth={setAuth} isAuthenticated={isAuthenticated} />
 
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -75,7 +77,7 @@ function App() {
           path="/report"
           element={
             isAuthenticated ? (
-              <Report setAuth={setAuth} />
+              <Report />
             ) : (
               <Navigate replace to="/login" />
             )

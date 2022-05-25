@@ -1,38 +1,22 @@
- const url = 'http://localhost:8081/getReports'
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
- function RenderReports(){
+function RenderReports({reports}) {
 
-    async function getReports(event){
-        event.preventDefault();
-         const response = await fetch(url , {
-            method: 'GET',
-            headers: {
-                
-                "Content-Type": "application/json",
-                // user_id: userId,
-            }
-         })
-         const reports = await response.json();
-         reports.map(report => {
-             return (
-                <ul>
-                <li>
-                    <h4>`${report.station}` </h4>
-                    <h6>`${report.reportType}`</h6>
-                    <p>`${report.details}`</p>
-             
-                </li>
-            </ul>
+  return (
+    <ul>
+      <li>
+        <h4>{reports.station_name} </h4>
+        <h6>{reports.incident}</h6>
+        <p>{reports.more_details}</p>
+      </li>
+    </ul>
+  );
+}
 
-             )
-
-         })
-        }
-
-
-
- }
-
-
-
- export default RenderReports;
+export default RenderReports;

@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import {UncontrolledCarousel} from 'reactstrap'
 import {Link} from "react-router-dom"
 import React from 'react'
+import NavBar from './NavBar';
 // import PsychologyIcon from '@mui/icons-material/Psychology';
 // import { fa-user-police } from '@fortawesome/free-solid-svg-icons'
 
@@ -14,8 +15,6 @@ function HomePage(){
     return(
         
         <div>
-         
-
            <div className='top-container'>
              <img className='bg-img'  alt="" src='https://brooklyneagle.com/wp-content/uploads/2021/03/AP17172784995527.jpg'/>
              

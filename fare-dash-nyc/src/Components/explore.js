@@ -1,66 +1,43 @@
-import { useState, useEffect } from 'react';
-import '../Explore.css'
 
-import Map2 from './Map2';
-import PostBoard from './PostBoard';
+import { useEffect, useState } from "react";
+import "../Explore.css";
+import Map2 from "./Map2";
+import * as React from "react";
+import { DateTime } from "luxon";
 
+const url = "http://localhost:8081/reports";
 
-
-function Explore(){
-    const [fetchedStations, setfetchedStations] = useState([])
-    const [inputText, setInputText] = useState('')
-    const [suggestions, setsuggestions] = useState([])
-    useEffect(()=>{
-        fetch('https://data.cityofnewyork.us/resource/kk4q-3rt2.json')
-        .then(resp => resp.json())
-        .then(data =>  {
-           data.map(stat => {
-let stationname = stat.name
-setfetchedStations(stationname)
-
-           })
-
-        })
-    },[])
-    function handleOnChange(inputText) {
-        let matches = []
-         
-        if(inputText.length > 0){
-             matches = fetchedStations.filter(name => {
-                 const regex = new RegExp(`${inputText}`,'gi')
-                return name.match(regex)
-             })
-
-        }
-
-console.log(matches)
-setsuggestions(matches)
-setInputText(inputText) 
-    }
+function Explore() {
+  const [reports, setReports] = useState([]);
 
 
-    return(
-        <div>
-            <div className='container'>
-                <div className='reports'>
-                
-      
-       <input onChange={e => handleOnChange(e.target.value)}
-       value={inputText}
-        type='text' 
-        placeholder='search for a station' 
-       ></input>
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => setReports(data));
+  }, []);
 
-<PostBoard/>
-       {/* <RenderReports/> */}
-      
-</div>
 
-<Map2/>
-
-</div>
-
+  return (
+    <div className="container">
+        <Map2 />
+        <div className="reports">
+          <h2 className="search-reports">Recent Reports</h2>
+          {reports.map((report) => {
+            return (
+              <ul>
+              <li className="report-card">
+                <p>{DateTime.fromISO(report.timestamp).toRelative()}</p>
+                <h4>{report.station_name} <i class="fa-solid fa-train-subway" style={{color: "grey"}}></i></h4>
+                <h6>{report.incident}</h6>
+                <p>{report.more_details}</p>
+              </li>
+            </ul>
+              );
+          })}
         </div>
-    ) 
+      </div>
+    
+  );
 }
-export default Explore
+export default Explore;

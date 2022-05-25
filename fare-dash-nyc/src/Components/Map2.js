@@ -22,7 +22,8 @@ function Map2() {
       className="map"
       center={position}
       zoom={13}
-      style={{ height: 500, width: 700 }}
+
+      style={{ height: 700, width: "100%" , zIndex: 0}}
     >
       {/* mapbox://styles/khaliap26/cl3ja66zi003g16oxici6xh35 */}
       <TileLayer
