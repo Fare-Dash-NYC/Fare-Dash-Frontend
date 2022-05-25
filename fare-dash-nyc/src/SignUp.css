@@ -1,0 +1,78 @@
+ .forms{
+     width: 100%;
+     height: 100vh;
+     background-image: url('https://media.istockphoto.com/photos/panoramic-view-of-manhattan-skyscrapers-at-night-at-christmas-from-picture-id1153849876?k=20&m=1153849876&s=612x612&w=0&h=j72ZaY-Tq812vGLiMx7WQR0VTo8InO-RfqKTMcn5jfo=');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+position: relative;
+    }
+ 
+ .sign-up{
+     display: flex;
+     flex-direction: column;
+     
+   
+     color: white;
+   
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100vh;
+     padding-top: 13rem;
+     padding-left: 8rem;
+     background-image: linear-gradient(to right, 
+   
+     rgba(0,0,0,.9) 40%,
+  
+  
+    rgba(0,0,0,.3)65%,
+   
+    rgba(0,0,0,0)100% 
+     );
+
+ }
+ .sign-up form{
+     padding-top: 40px;
+   position: absolute;
+     background-color: transparent;
+     
+ }
+ .sign-up h1{
+     font-size: 4rem;
+     padding-left: 60px;
+ }
+ .sign-up h5{
+  
+     
+    font-size: 2rem;
+    padding-left: 60px;
+}
+.link{
+    display: flex;
+    justify-content: center;
+}
+
+.sign-up button{
+   
+    height: 35px;
+    width: 200px;
+    border-radius: 20px;
+    margin-top: 25px;
+    margin-left: 90px;
+}
+.sign-up a{
+    color: blue;
+}
+.sign-up input{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+@media screen and (max-width: 750px) {
+    .sign-up input {
+        background-color: white;
+        color: black;
+    }
+}

@@ -5,6 +5,7 @@
   justify-content: space-between;
 }
 
+
  
 .report-card{
   border: 3px solid rgb(201, 106, 17);
@@ -16,6 +17,7 @@
 .search-reports{
   padding: 10px;
   font-size: 20px;
+
 }
 
 /* On screens that are 992px or less, set the background color to blue */

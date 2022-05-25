@@ -82,6 +82,7 @@ function NavBar({setAuth, isAuthenticated}) {
         <button className="mobile-menu-icon" onClick={() => setMobile(!Mobile)}>
           {Mobile ? <ImCross /> : <FaBars />}
         </button>
+
       </nav>
     </>
   );

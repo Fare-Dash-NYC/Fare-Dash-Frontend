@@ -1,8 +1,10 @@
-import { Button, Label, Input, FormGroup, Form } from "reactstrap";
+
 // import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import '../Login.css'
+import {MdOutlineLogin} from 'react-icons/md'
+import { Link } from "react-router-dom";
 const url = "http://localhost:8081";
 
 function Login({setAuth}) {
@@ -41,14 +43,17 @@ function Login({setAuth}) {
   };
 
   return (
-    <div>
-      <Form inline onSubmit={handleLogIn}>
-        <h1 className="mt-5 text-center">LOG IN</h1>
-        <FormGroup >
-          <Label className="me-sm-2" for="exampleEmail">
-            Email
-          </Label>
-          <Input
+    <div> 
+      <section className="form-sec">
+        <div className="login">
+          <div className="header">
+      <h1 className="mt-5 text-center">LOG IN <MdOutlineLogin/></h1>
+     </div> 
+     <div className="form-con">
+     <form inline onSubmit={handleLogIn}>
+       
+      
+          <input
             onChange={handleLogInFormChange}
             id="exampleEmail"
             name="email"
@@ -56,12 +61,10 @@ function Login({setAuth}) {
             type="email"
             className="form-control my-3"
           />
-        </FormGroup>
-        <FormGroup >
-          <Label className="me-sm-2" for="examplePassword">
-            Password
-          </Label>
-          <Input
+       
+        
+         
+          <input
             onChange={handleLogInFormChange}
             id="examplePassword"
             name="password"
@@ -70,9 +73,15 @@ function Login({setAuth}) {
             className="form-control my-3"
 
           />
-        </FormGroup>
-        <Button type="submit" class="btn btn-success btn-block">Log in</Button>
-      </Form>
+          <div className="link">
+        <h5>Not A Member Yet?</h5>
+        <Link to={'/signup'}>
+        <h5 style={{paddingLeft:'0'}}><a href="">Sign Up</a> </h5></Link>
+      </div>  <button type="submit" class="btn btn-success btn-block">Log in</button>
+      </form>
+      </div>
+      </div>
+      </section>
     </div>
   );
 }

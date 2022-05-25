@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import "../Explore.css";
 import Map2 from "./Map2";
@@ -9,11 +10,13 @@ const url = "http://localhost:8081/reports";
 function Explore() {
   const [reports, setReports] = useState([]);
 
+
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => setReports(data));
   }, []);
+
 
   return (
     <div className="container">
