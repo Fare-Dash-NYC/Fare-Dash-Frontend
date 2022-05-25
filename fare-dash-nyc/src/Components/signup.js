@@ -65,7 +65,7 @@ function SignUp({setAuth}) {
          <section className="forms">
            <div className="sign-up">
              <div className="heading">
-                  <h1>DASH ACCOUNT<MdPermContactCalendar/></h1>
+                  <h1 className="dash-account">DASH ACCOUNT<MdPermContactCalendar/></h1>
        </div>
      <div className="act">
        <form onSubmit={handleRegistration}>

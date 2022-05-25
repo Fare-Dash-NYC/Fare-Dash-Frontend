@@ -30,8 +30,8 @@ position: relative;
      )
 }
 .login h1{
-    font-size: 4rem;
-     padding-left: 80px;
+    font-size: 3rem;
+     padding-left: 50px;
      position: absolute; 
      top: 5;
 }
@@ -65,5 +65,11 @@ position: relative;
 }
 .login h5 {
     padding-top: 20px;
-    font-size: 2rem; 
+    font-size: 1rem; 
+}
+@media screen and (max-width: 750px) {
+    .login input {
+        background-color: white;
+        color: black;
+    }
 }
