@@ -74,7 +74,7 @@ function NavBar({setAuth, isAuthenticated}) {
         {/* 
         whenever we click on button = setMobile(!Mobile) ==  is mobile oppsite to setMobile 
         */}
-        <button className="mobile-menu-icon" onClick={() => setMobile(!Mobile)}>
+        <button className="mobile-menu-icon" style={{color: "white"}} onClick={() => setMobile(!Mobile)}>
           {Mobile ? <ImCross /> : <FaBars />}
         </button>
 

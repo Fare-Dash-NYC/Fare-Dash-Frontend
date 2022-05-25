@@ -20,7 +20,7 @@ function Explore() {
 
   return (
     <div className="container">
-        <Map2 />
+        <Map2 className="map2" />
         <div className="reports">
           <h2 className="search-reports">Recent Reports</h2>
           {reports.map((report) => {
