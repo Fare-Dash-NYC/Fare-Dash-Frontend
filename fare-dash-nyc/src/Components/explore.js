@@ -27,10 +27,10 @@ function Explore() {
             return (
               <ul>
               <li className="report-card">
-                <p>{DateTime.fromISO(report.timestamp).toRelative()}</p>
-                <h4>{report.station_name} <i class="fa-solid fa-train-subway" style={{color: "grey"}}></i></h4>
-                <h6>{report.incident}</h6>
-                <p>{report.more_details}</p>
+                <p className="time">{DateTime.fromISO(report.timestamp).toRelative()}</p>
+                <h4 className="name">{report.station_name} <i class="fa-solid fa-train-subway" style={{color: "grey"}}></i></h4>
+                <h6 className="incident">{report.incident}</h6>
+                <p className="details">{report.more_details}</p>
               </li>
             </ul>
               );

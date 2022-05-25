@@ -8,7 +8,7 @@ import '../Map.css'
 function Map2() {
   const train = new Icon({
     iconUrl:
-    "https://img.icons8.com/ios-glyphs/30/000000/train.png",
+    "https://img.icons8.com/ios-filled/50/000000/marker.png",
     iconSize: [25, 25],
   });
   const position = [40.678177, -73.94416];
