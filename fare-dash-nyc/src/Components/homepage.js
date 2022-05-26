@@ -99,43 +99,24 @@ src={require ('./Rectangle.png')}/>
 
 
 
-           {/* <CardGroup>
-  <Card>
-    <Card.Img variant="top"/>
-    <Card.Body>
-      <Card.Title>Know what’s happening so you and your loved ones can stay safe.</Card.Title>
-      <Card.Text>
-      92% of the 481 fare evasion arrests in the fourth quarter of 2019 were of non-white riders; 60% were black. Data like that led New York Attorney General Letitia James to announce a probe of 
-               racial disparities in fare evasion stops. 
-      </Card.Text>
-    </Card.Body>
-  </Card>
-  <Card>
-    <Card.Img variant="top"/>
-    <Card.Body>
-      <Card.Title>Always know when the cops are at the stations.</Card.Title>
-      <Card.Text>
-      Fare evasion is in large part “a function of poverty and inconvenience.” People arrested for fare evasion rely on public defenders, a pretty good sign they are struggling to make ends meet.
-      </Card.Text>
-    </Card.Body>
-  </Card>
-  <Card>
-    <Card.Img variant="top"/>
-    <Card.Body>
-      <Card.Title> Get safety report in real time</Card.Title>
-      <Card.Text>
-      Antiquated broken windows policing strategies that crimilize 
-                the poor at the turnstile do not begin to address any of the root 
-                problems playing out at the turnstile. They do not make transit more affordable.
-                They do not make it easier for riders to pay. They do  not reduce police bias,
-                but rather enable.
-      </Card.Text>
-    </Card.Body>
-  </Card>
-</CardGroup>  */}
+      <div className="services">
+        <h3>WERE ON A MISSION TO MAKE THE WORLD A BETTER PLACE....</h3>
+        <p>
+          <b>We believe in public information for the good of the public</b>
+        </p>
+        <p>
+          By being able to act on real time alerts low income mta riders are to
+          be aware of police presence in subway stations to avoid high fines.{" "}
+        </p>
+        <p>
+          We believe in giving people a way to use their phones to be aware and
+          keep each other aware.{" "}
+        </p>
+      </div>
+
            
         </div>
     )
 }
 
-export default HomePage
+export default HomePage;
