@@ -1,35 +1,37 @@
-.bg-img{
 
-    -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
-    filter: blur(3px);
- 
-  background-repeat: no-repeat;
+.mission-text{
+  width: 400px;
+  margin-left: 50px;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+.top{
+  margin-top: 100px;
+  padding-bottom: 50px;
+  display: flex;
 
-  width: 100vw;
-  height: 700px;
-  
-
-
-  
-} 
-.top-container{
-    margin-bottom: 150px;
+  align-items: center;
+  justify-content: space-between;
+}
+.mission-text button{
+  background-color: #ea330b;
+border-radius: 10px;
+padding: 5px;
 }
 
 .mission h1 {
-
     position: absolute;
    background-color: transparent;
-   color: white;
+   color: black;
     top: 30%;
-    left: 31%;
-   
+    left: 28%;
     transform: translate(-50%, -50%); 
 }
 .mission p{
     position: absolute;
     background-color: transparent;
-    color: white;
+    color: black;
     font-weight:800;
     margin-left: 45px;
    width: 500px;
@@ -46,46 +48,51 @@ border-radius: 3px;
     left:10%;
 
 }
+.img{
+  width: 430px;
+  height: 395px;
+  margin-right: 100px;
+  position: relative;
+  top: 0;
+  left: 0;
 
-
-
-
-.facts {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
 }
-.facts p {
-    width: 380px;
-    margin-left: 30px;
-}
-.facts-text{
-
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 100px;
-    /* padding-bottom: 15px; */
+.img2{
+  position: absolute;
+ top: 180px;
+ left: 720px;
+  height: 400px;
+  width: 430px;
+ 
 }
 
+.facts{
+  width: 400px;
+  margin-left: 100px;
+   /* text-align: center; */
+}
 
-.column {
-    float: left;
-    width: 25%;
-   height: auto;
-    padding: 0 0px;
-  }
-  
-  /* Remove extra left and right margins, due to padding */
-  .row {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
+.facts-container{
+
+  margin-top: 200px;
+ 
+}
+.gif{
+  display: flex;
+
+  /* justify-content: space-between; */
+  /* border-bottom: 1px solid white; */
+}
+.gif img{
+  margin-right: 0;
+}
+.gif p{
+  /* margin-left: 10rem; */
+  font-size: larger;
+  color: white;
+  width: 400px; 
+  text-align: center;
+}
   /* Responsive columns */
   @media screen and (max-width: 600px) {
     .column {
@@ -95,31 +102,7 @@ border-radius: 3px;
     }
   }
   
-  /* Style the counter cards */
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-  }
-.stats {
-    display: flex;
-
-    justify-content: space-around;
-    padding: 70px;
-    border-top: 1px black solid;
-  border-bottom: 1px black solid;
-    margin-bottom: 150px;
-   
-}
-.services{
-
-    display: flex;
-    flex-direction: column;
-justify-content: center;
-align-items: center;
-margin-bottom: 100px;
-}
+ 
 
 @media screen and (max-width: 1080px) {
 .facts{
