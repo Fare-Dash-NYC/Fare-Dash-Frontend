@@ -19,11 +19,14 @@ li {
   justify-content: space-around;
   justify-content: center;
   align-items: center;
-  height: 8vh;
+  height: 6vh;
   background-color: rgb(3, 3, 3);
   box-shadow: rgba(0, 0, 0, 0.23) 0px 30px 30px -20px;
 
   /*box-shadow: rgba(50, 50, 93, 0.23) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;*/
+}
+.svg {
+  padding-bottom: 10px;
 }
 .logo {
   font-size: 30px;

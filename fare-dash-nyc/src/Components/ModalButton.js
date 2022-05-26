@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import { Button, Modal, Form } from "react-bootstrap";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,6 +5,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import "../Report.css";
 
 const url = "http://localhost:8081/reports";
+
 function useQuery() {
   const { search } = useLocation();
 
@@ -14,7 +13,8 @@ function useQuery() {
 }
 
 function ModalButton(props) {
-  const { stationName } = props;
+  
+  const { stationName, isAuthenticated } = props;
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -93,7 +93,7 @@ function ModalButton(props) {
             >
               <option>Undercover police Spotted</option>
               <option>Police Officer Hiding</option>
-              <option>Mulitple Police Officers Spotted</option>
+              <option>Multiple Police Officers Spotted</option>
               <option>1-4 police Officers Spotted</option>
               <option>Other</option>
             </Form.Select>

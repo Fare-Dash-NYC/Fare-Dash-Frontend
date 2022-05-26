@@ -1,58 +1,51 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-
 
 .container {
   display: flex;
   justify-content: center;
   flex-direction: row;
   width: 100vw;
-  justify-content: space-between;
   background-color: rgb(0, 0, 0);
   /* position:fixed;
   overflow-y:scroll;
   overflow-x:hidden; */
 }
-.time{
+.time {
   color: brown;
 }
 
-.map2 {
-  position: fixed;
-}
+
 .name {
   color: rgb(252, 252, 207);
+  font-size: 20px;
 }
- 
+
 .incident {
   color: antiquewhite;
+  font-size: smaller;
 }
 
-.details{
+.details {
   color: rgb(124, 115, 100);
+  font-size: smaller;
 }
 
-.report-card{
-  border: 3px solid rgb(201, 106, 17);
+.report-card {
+  border: 2px solid rgb(201, 106, 17);
   border-radius: 5px;
   margin: 10;
   padding: 10px;
-}
-
-.reports {
-  /* position: fixed;
-  overflow: hidden;
-  overflow-y:scroll */
+  width: 25vw;
 }
 
 
-.search-reports{
+.search-reports {
   padding: 10px;
   font-size: 20px;
   color: azure;
-
 }
 
 /* On screens that are 992px or less, set the background color to blue */

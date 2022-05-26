@@ -52,7 +52,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/explore" element={<Explore />} />
+        <Route path="/explore" element={<Explore isAuthenticated={isAuthenticated} />} />
         <Route
           path="/login"
           element={

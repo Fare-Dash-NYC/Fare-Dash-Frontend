@@ -7,7 +7,7 @@ import { Icon } from "leaflet";
 import "../Map.css";
 import { useEffect, useState } from "react";
 
-function Map2({ reports }) {
+function Map2({ reports, isAuthenticated }) {
   //create an orange train icon
   //create a hangleReportMarker function that takes the report data and performs a .find - if its falsy then its reg icon if truthy then red icon
   const train = new Icon({
@@ -20,9 +20,9 @@ function Map2({ reports }) {
     iconSize: [19, 25],
   });
 
-  const streets = reports.map(report => {
-    return report.station_name
-  })
+  const streets = reports.map((report) => {
+    return report.station_name;
+  });
 
   const position = [40.678177, -73.94416];
 
@@ -46,10 +46,13 @@ function Map2({ reports }) {
           ]}
           icon={streets.includes(stations.name) ? train2 : train}
         >
-          <Popup className="popup-modal" style={{backgroundColor:'black'}}>
+          <Popup className="popup-modal" style={{ backgroundColor: "black" }}>
             <h6 className="popup-name">{stations.name}</h6>
             <p className="popup-line">Available trains: {stations.line}</p>
-            <ModalButton stationName={stations.name} />
+            <ModalButton
+              stationName={stations.name}
+              isAuthenticated={isAuthenticated}
+            />
           </Popup>
         </Marker>
       ))}
