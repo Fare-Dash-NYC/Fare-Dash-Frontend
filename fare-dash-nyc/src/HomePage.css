@@ -1,11 +1,4 @@
 
-.mission-text{
-  width: 400px;
-  margin-left: 50px;
-  color: white;
-  text-align: center;
-  align-items: center;
-}
 .top{
   margin-top: 100px;
   padding-bottom: 50px;
@@ -14,10 +7,22 @@
   align-items: center;
   justify-content: space-between;
 }
+.mission-text{
+  width: 400px;
+  margin-right: 300px;
+  /* padding-right: 100px; */
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+
 .mission-text button{
   background-color: #ea330b;
 border-radius: 10px;
 padding: 5px;
+}
+.mission-img{
+ padding-left: 70px;
 }
 
 .mission h1 {
@@ -48,10 +53,14 @@ border-radius: 3px;
     left:10%;
 
 }
+.container{
+  display: flex;
+  align-items: center;
+}
 .img{
-  width: 430px;
+  width: 500px;
   height: 395px;
-  margin-right: 100px;
+  /* margin-right: 100px; */
   position: relative;
   top: 0;
   left: 0;
@@ -59,10 +68,10 @@ border-radius: 3px;
 }
 .img2{
   position: absolute;
- top: 180px;
- left: 720px;
+ top: 189px;
+ left: 900px;
   height: 400px;
-  width: 430px;
+  width: 490px;
  
 }
 
