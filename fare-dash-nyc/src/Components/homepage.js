@@ -64,8 +64,8 @@ function HomePage() {
             <div>
               <img
                 alt=""
-                style={{ width: "200px", height: "200px", marginLeft: "400px" }}
-                src="https://media.giphy.com/media/Q2JRHHzmMw4SSFk0dv/giphy.gif"
+                style={{ width: "250px", height: "250px", marginLeft: "300px" }}
+                src="https://media.giphy.com/media/fAEj9oqG6iwApdz0jg/giphy.gif"
               />
             </div>
           </div>
@@ -73,7 +73,7 @@ function HomePage() {
             <img
               alt=""
               style={{ width: "200px", height: "200px", marginRight: "400px" }}
-              src="https://media.giphy.com/media/Q2JRHHzmMw4SSFk0dv/giphy.gif"
+              src="https://media.giphy.com/media/KenqZPDgaBS8fDZiOx/giphy.gif"
             />
 
             <div>
