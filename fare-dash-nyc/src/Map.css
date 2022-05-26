@@ -6,16 +6,21 @@
       position:sticky;
   overflow-x:hidden;
   }
- .popup-name{
-   color: black;
-   font-size: 25px;
+  .popup-modal .leaflet-popup-content-wrapper {
+background-color: black;
+
+  }
+ .popup-name {
+   color: white;
+   font-size: 20px;
    text-align: center;
  }
  .popup-line{
-color: #000;
+color:white;
 font-weight: bold;
 text-align: center;
  }
+
   @media screen and (max-width: 1000px) {
 
     .map{

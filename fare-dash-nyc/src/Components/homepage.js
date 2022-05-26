@@ -4,12 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import {UncontrolledCarousel} from 'reactstrap'
 import {Link} from "react-router-dom"
 import React from 'react'
-import NavBar from './NavBar';
+
+
 // import PsychologyIcon from '@mui/icons-material/Psychology';
 // import { fa-user-police } from '@fortawesome/free-solid-svg-icons'
 
 
 function HomePage(){
+ 
 
 
     return(
@@ -29,6 +31,7 @@ function HomePage(){
 </div>
 
            </div> 
+           
            <div className='facts'>
              <div className='facts-text'>
              

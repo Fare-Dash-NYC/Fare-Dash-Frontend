@@ -36,14 +36,15 @@ function Map2() {
         url="https://api.mapbox.com/styles/v1/jjanmorales/cl3loqpt8000l15o6zbpe3wgu/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoiamphbm1vcmFsZXMiLCJhIjoiY2wza3FjcW5lMjQ1czNlcDYwZ2t0MG90NiJ9.EhVt0oaCW-Rk4UBG0j01GQ"
    />
       {SubwayStations.map((stations) => (
-        <Marker
+        <Marker 
           position={[
             stations.the_geom.coordinates[1],
             stations.the_geom.coordinates[0],
           ]}
           icon={train}
         >
-          <Popup className="popup-modal" style={{backgroundColor:'black'}}>
+          <Popup className="popup-modal" >
+           
             <h6 className="popup-name">{stations.name}</h6>
             <p className="popup-line">Available trains: {stations.line}</p>
             <ModalButton stationName={stations.name} />
