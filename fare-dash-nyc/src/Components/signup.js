@@ -119,7 +119,7 @@ function SignUp({setAuth}) {
              
          />
 </Col>
-<Row style={{marginBottom:'30px', width:'300px'}}>
+{/* <Row style={{marginBottom:'30px', width:'300px'}}>
             <input
             style={{borderRadius:"10px", textAlign:"center", marginLeft:'70px',height:'40px'}}
               onChange={handleSignupFormChange}
@@ -128,7 +128,7 @@ function SignUp({setAuth}) {
               placeholder="Display name"
               type="displayName"
         />
-        </Row>
+        </Row> */}
         <div className="link">
         <h5>Already A Member?&nbsp;</h5> <Link to={'/login'}><h5 style={{paddingLeft:'0'}}><a href="">Login here</a> </h5>
         </Link>
