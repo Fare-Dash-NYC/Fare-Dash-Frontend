@@ -15,7 +15,7 @@ function HomePage() {
         <div className="carousel"></div>
 
         {/* <img className='bg-img'  alt="" src='https://assets.teenvogue.com/photos/5de958477c5a7e0008756457/3:2/w_4392,h_2928,c_limit/GettyImages-462477089.jpg'/> */}
-        <div className="top">
+        <div className="top-home">
           <div className="mission-text">
             <h1>WHERE PEOPLE HELP EACH OTHER</h1>
             <p>
@@ -38,7 +38,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container-home">
         <div className="facts-container">
           <div className="gif">
             <img
