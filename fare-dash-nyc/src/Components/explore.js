@@ -26,7 +26,7 @@ function Explore({isAuthenticated}) {
   return (
     <div className="container">
       <div className="top-container">
-        <Map2 className="map2" reports={reports} isAuthenticated={isAuthenticated} />
+        <Map2 className="map2" reports={allReports} isAuthenticated={isAuthenticated} />
       <div className="reports">
         <h2 className="search-reports">Recent Reports</h2>
         {reports.map((report) => {
@@ -45,7 +45,7 @@ function Explore({isAuthenticated}) {
                 </h4>
                 <h6 className="incident">{report.incident}{" "}<GiPoliceOfficerHead/></h6>
                 <p className="details">{report.more_details}</p>
-                <LikeBtn/>
+                {isAuthenticated ? <LikeBtn/> : null}
               </li>
             </ul>
           );
@@ -57,7 +57,7 @@ function Explore({isAuthenticated}) {
         {allReports.map((report) => {
           return (
             <ul className="reports-ul">
-              <li className="report-card">
+              <li className="report-card-2">
                 <p className="time">
                   {DateTime.fromISO(report.timestamp).toRelative()}
                 </p>
@@ -70,7 +70,7 @@ function Explore({isAuthenticated}) {
                 </h4>
                 <h6 className="incident">{report.incident}{" "}<GiPoliceOfficerHead/></h6>
                 <p className="details">{report.more_details}</p>
-                <LikeBtn/>
+                {isAuthenticated ? <LikeBtn/> : null}
               </li>
             </ul>
           );
