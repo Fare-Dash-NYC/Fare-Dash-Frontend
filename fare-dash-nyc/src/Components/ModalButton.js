@@ -101,13 +101,13 @@ function ModalButton(props) {
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
-              <Form.Label>More Deatails</Form.Label>
+              <Form.Label>More Details</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={3}
                 onChange={handleReportFormChange}
                 type="textarea"
-                placeholder="Add more deatils to your report Ex. Police hiding in the NW exit"
+                placeholder="Add more details to your report Ex. Police hiding in the NW exit"
                 name="details"
                 id="exampleText"
               />

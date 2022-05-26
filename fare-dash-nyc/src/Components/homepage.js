@@ -49,20 +49,17 @@ function HomePage() {
             {/* <iframe src="https://giphy.com/embed/Q2JRHHzmMw4SSFk0dv" width="600" height="200" frameBorder="0"  allowFullScreen></iframe> */}
             <div>
               <p>
-                92% of the 481 fare evasion arrests in the fourth quarter of
-                2019 were of non-white riders; 60% were black. Data like that
-                led New York Attorney General Letitia James to announce a probe
-                of racial disparities in fare evasion stops.
+              New Yorkers of colors are constantly under the threat of police harassment and brutality in our subway systems. 
+              According to the Gotham Gazette 92% of the 481 fare evasion arrests in the fourth quarter of 2021 were of non-white riders; 
+              60 % were black. 
               </p>
             </div>
           </div>
 
           <div className="gif" style={{ marginTop: "150px" }}>
             <p>
-              Fare evasion is in large part “a function of poverty and
-              inconvenience.” People arrested for fare evasion rely on public
-              defenders, a pretty good sign they are struggling to make ends
-              meet.
+            Fare evasion is a criminal offense. If convicted, 
+            you may get a criminal record and pay a fine of up to $100. 
             </p>
             <div>
               <img
@@ -81,11 +78,8 @@ function HomePage() {
 
             <div>
               <p>
-                Antiquated broken windows policing strategies that crimilize the
-                poor at the turnstile do not begin to address any of the root
-                problems playing out at the turnstile. They do not make transit
-                more affordable. They do not make it easier for riders to pay.
-                They do not reduce police bias, but rather enable.
+              With fare dash, commuters from black and brown communities are able to stay alert of police presence in train stations 
+              and keep themselves safe from stop and frisk, and high fines.
               </p>
             </div>
           </div>
