@@ -8,8 +8,8 @@
 > - Node
 
 ## Team
-Annecie Jean Baptiste - Product Owner
-<br>Jan Morales - Scrum Master
-<br>Charles Yarney
-<br>Khalia Parris
+Annecie Jean Baptiste - Product Owner/Engineer
+<br>Jan Morales - Scrum Master/Engineer
+<br>Charles Yarney- Software Engineer
+<br>Khalia Parris - Software Engineer
 
